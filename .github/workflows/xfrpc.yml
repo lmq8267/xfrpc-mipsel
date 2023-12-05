@@ -32,6 +32,7 @@ jobs:
           wget -c https://github.com/lmq8267/vnt-cli/releases/download/Armada370-ToolChain/buildroot-2023.02.5-mipsel-uclibc.zip -P /opt/gcc/
           unzip /opt/gcc/buildroot-2023.02.5-mipsel-uclibc.zip -d /opt/gcc/
           sudo chmod 777 -R /opt/gcc
+          sudo timedatectl set-timezone "Asia/Shanghai"
       - 
         name: 编译xfrpc
         shell: bash
