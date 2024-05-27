@@ -42,7 +42,7 @@ jobs:
           export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/gcc/host/lib
           mipsel-linux-gcc -v
           mkdir build && cd build
-          cmake -DTHIRDPARTY_STATIC_BUILD=mips -DCMAKE_C_COMPILER=mipsel-linux-gcc -D THIRDPARTY_STATIC_BUILD=ON ..
+          cmake -DTHIRDPARTY_STATIC_BUILD=mips -DCMAKE_C_COMPILER=mipsel-linux-gcc -D THIRDPARTY_STATIC_BUILD=ON -DSTATIC_BUILD=ON ..
           make
       - 
         name: 剥离压缩
